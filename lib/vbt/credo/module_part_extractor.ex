@@ -1,4 +1,4 @@
-defmodule VbtCredo.ModulePartExtractor do
+defmodule Vbt.Credo.ModulePartExtractor do
   @moduledoc "Extraction of module parts from an ast"
 
   @type module_part ::
@@ -95,7 +95,7 @@ defmodule VbtCredo.ModulePartExtractor do
   ...>     @moduledoc "Another module doc"
   ...>   end
   ...> /)
-  iex> VbtCredo.ModulePartExtractor.analyze(ast)
+  iex> Vbt.Credo.ModulePartExtractor.analyze(ast)
   [
     {SomeModule, [
       moduledoc: [line: 3],

@@ -1,4 +1,4 @@
-defmodule VbtURI do
+defmodule Vbt.URI do
   @moduledoc """
   Encoding and decoding of VBT URIs.
 
@@ -26,7 +26,7 @@ defmodule VbtURI do
       ...>   query: "foo=1&bar=2",
       ...>   fragment: "some_fragment"
       ...> }
-      iex> VbtURI.to_string(uri)
+      iex> Vbt.URI.to_string(uri)
       "http://foo.bar:4000/#!some/path?foo=1&bar=2#some_fragment"
   """
   @spec to_string(URI.t()) :: String.t()
@@ -40,7 +40,7 @@ defmodule VbtURI do
   @doc """
   Parses a well-formed VBT URI string into its components.
 
-      iex> VbtURI.parse("http://foo.bar:4000/#!some/path?foo=1&bar=2#some_fragment")
+      iex> Vbt.URI.parse("http://foo.bar:4000/#!some/path?foo=1&bar=2#some_fragment")
       %URI{
         scheme: "http",
         host: "foo.bar",
